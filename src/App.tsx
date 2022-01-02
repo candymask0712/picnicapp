@@ -1,24 +1,22 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Nav } from 'react-bootstrap';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav defaultActiveKey="/home" as="ul">
+        <Nav.Item as="li">
+          <Nav.Link href="/home">Home</Nav.Link>
+        </Nav.Item>
+        <Nav.Item as="li">
+          <Nav.Link eventKey="link-1">Weather</Nav.Link>
+        </Nav.Item>
+        <Nav.Item as="li">
+          <Nav.Link eventKey="link-2">Population</Nav.Link>
+        </Nav.Item>
+      </Nav>
     </div>
   );
 }
